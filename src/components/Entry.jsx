@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card(props) {
+function Entry(props) {
   return (
     <div className="term">
       <dt>
@@ -14,4 +14,4 @@ function Card(props) {
   );
 }
 
-export default Card;
+export default Entry;

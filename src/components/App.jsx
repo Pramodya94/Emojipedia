@@ -1,15 +1,15 @@
 import React from "react";
 import Title from "./Title";
-import Card from "./Card";
+import Entry from "./Entry";
 import emojipedia from "../emojipedia";
 
-function createCard(emojipedia) {
+function createEntry(emojiEntry) {
   return (
-    <Card
-      key={emojipedia.id}
-      emoji={emojipedia.emoji}
-      name={emojipedia.name}
-      meaning={emojipedia.meaning}
+    <Entry
+      key={emojiEntry.id}
+      emoji={emojiEntry.emoji}
+      name={emojiEntry.name}
+      meaning={emojiEntry.meaning}
     />
   );
 }
@@ -18,7 +18,7 @@ function App() {
   return (
     <div>
       <Title />
-      <dl className="dictionary">{emojipedia.map(createCard)}</dl>
+      <dl className="dictionary">{emojipedia.map(createEntry)}</dl>
     </div>
   );
 }
